@@ -1,3 +1,4 @@
+###########################################################
 # Rock Paper Sizz
 
 import random, sys
@@ -15,8 +16,9 @@ while True: # the main loop for the game
         print('Enter your move: (r)ock (p)aper (s)izz or (q)uit')
         playerMove = input()
         if playerMove == 'q':
+            print('Good Game')
             sys.exit() # quit the program
-        if playerMove=='r' or playerMove=='p' or player=='s':
+        if playerMove=='r' or playerMove=='p' or playerMove=='s':
             break # leave player input loop
         print('Type one of r, p, s or q')
 
@@ -31,7 +33,7 @@ while True: # the main loop for the game
     # Display computer's choice
     randomNumber = random.randint(1, 3)
     if randomNumber == 1:
-        computerMove='r'
+        computerMove = 'r'
         print('ROCK')
     if randomNumber == 2:
         computerMove = 'p'
@@ -40,7 +42,7 @@ while True: # the main loop for the game
         print('SIZZ')
 
     # Display and record win/loss/tie
-    if (playerMove == computerMove):
+    if (computerMove == playerMove):
         print('Its a tie!')
         ties = ties+1;
     elif playerMove=='r' and computerMove=='s':
@@ -52,6 +54,14 @@ while True: # the main loop for the game
     elif playerMove == 's' and computerMove == 'p':
         print('You Win')
         wins = wins + 1
-    elif playerMove == 'r' and computerMove == 's';
-        print('You Win')
-        wins = wins + 1
+    elif playerMove == 'r' and computerMove == 'p':
+        print('You Lose')
+        losses = losses + 1
+    elif playerMove == 'p' and computerMove == 's':
+        print('You Lose')
+        losses = losses + 1
+    elif playerMove == 's' and computerMove == 'r':
+        print('You Lose')
+        losses = losses + 1
+
+###########################################################
