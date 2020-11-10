@@ -18,7 +18,7 @@ while True: # the main loop for the game
         if playerMove == 'q':
             print('Good Game')
             sys.exit() # quit the program
-        if playerMove=='r' or playerMove=='p' or playerMove=='s':
+        if playerMove == 'r' or playerMove == 'p' or playerMove == 's':
             break # leave player input loop
         print('Type one of r, p, s or q')
 
